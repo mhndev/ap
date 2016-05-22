@@ -1,0 +1,34 @@
+{
+  "name": "mhndev/ap",
+  "description": "the most easy to use package for paying with AP (Asan Pardakht) for iranian",
+  "keywords": ["Payment", "AP", "Asan Pardakht", "Pay"],
+  "type": "library",
+  "homepage": "http://github.com/mhndev/ap",
+  "license": "BSD Style",
+  "authors": [
+    {
+      "name": "Majid Abdolhosseini",
+      "email": "majid8911303@gmail.com",
+      "homepage": "http://mhndev.com"
+    }
+  ],
+
+  "require": {
+    "php": ">=5.4.0"
+  },
+
+
+  "autoload": {
+    "psr-4": {
+      "mhndev\\ap\\": "src/"
+    }
+  },
+
+  "autoload-dev": {
+    "psr-4": {
+      "mhndev\\ap\\":"tests/"
+    }
+  },
+
+  "minimum-stability": "dev"
+}
