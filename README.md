@@ -34,7 +34,7 @@ $client->pay(100000, 12 , 'sample description for this payment');
 
 ```
 
-‫‪## RequestVerification‬‬
+## RequestVerification‬‬
 after pay request is done bank will call your callback page with some parameters 
  and after that you should do a verify request to verify the sent pay request
 
@@ -44,7 +44,7 @@ $client->verify(12);
 ```
 which 12 is pay gate id (after pay request you have this number and its unique for each pay request);
 
-‫‪## RequestReversal‬‬
+## RequestReversal‬‬
 after pay request is done and bank has sent you the success response you can do a reverse request which reverse the pay request process and it means.
 you cant do reverse request after verify request.
 and also you can reverse your payment :
@@ -53,7 +53,7 @@ and also you can reverse your payment :
 $client->reverse(12);
 
 ```
-which 12 is pay gate id (after pay request you have this number and its unique for each pay request);
+which 12 is pay gate id (after pay request you have this number and its unique for each pay request)
 
 
 ## ‫‪RequestReconciliation‬‬
