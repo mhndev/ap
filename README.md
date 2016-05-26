@@ -1,7 +1,9 @@
 the most easy to use package for paying with AP (Asan Pardakht) for iranian
 
-you can pay by :
+actually this a request to initial a pay request to bank .
+you can initial a pay request as follow :
 
+## RequestOperation
 ```php
 
 $client = new \mhndev\ap\Client([
@@ -32,22 +34,31 @@ $client->pay(100000, 12 , 'sample description for this payment');
 
 ```
 
-you can verify payment simply by :
+‫‪## RequestVerification‬‬
+after pay request is done bank will call your callback page with some parameters 
+ and after that you should do a verify request to verify the sent pay request
 
+you can verify payment simply by :
 ```php
 $client->verify(12);
 ```
-which 12 is pay gate id (after pay request you have this number);
+which 12 is pay gate id (after pay request you have this number and its unique for each pay request);
 
+‫‪## RequestReversal‬‬
+after pay request is done and bank has sent you the success response you can do a reverse request which reverse the pay request process and it means.
+you cant do reverse request after verify request.
 and also you can reverse your payment :
 
 ```php
 $client->reverse(12);
 
 ```
+which 12 is pay gate id (after pay request you have this number and its unique for each pay request);
 
 
-other available methods :
+## ‫‪RequestReconciliation‬‬
+
+this request is for settlement of a verified pay request
 
 ```php
 $clinet->reconciliation(12)
